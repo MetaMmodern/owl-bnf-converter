@@ -15,6 +15,9 @@
         <Class abbreviatedIRI="myOnt:Tabloid"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Plant"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#eats"/>
     </Declaration>
     <Declaration>
@@ -26,6 +29,14 @@
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#reads"/>
             <Class IRI="#Tabloid"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Animal"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Plant"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
 
