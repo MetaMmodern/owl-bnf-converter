@@ -1,0 +1,6 @@
+thing: Thing '{' (Animal|Tabloid|Plant) '}';
+Animal : Animal '{' [ Animal_reads_Tabloid, Animal_eats_Plant] '}';
+Animal_reads_Tabloid: '{' 'Animal' 'reads' TabloidID '}';
+Animal_eats_Plant: '{' 'Animal' 'eats' PlantID '}';
+Tabloid : Tabloid '{'  '}';
+Plant : Plant '{'  '}';
