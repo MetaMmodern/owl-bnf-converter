@@ -32,4 +32,5 @@ export default class Parser {
         this.parsedFile = fileStructure;
         return this.parsedFile;
     }
+
 }
