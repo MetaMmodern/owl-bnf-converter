@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ontology xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.w3.org/2002/07/owl# http://www.w3.org/2009/09/owl2-xml.xsd"
+    xmlns="http://www.w3.org/2002/07/owl#"
+    xml:base="http://example.com/myOntology"
+    ontologyIRI="http://example.com/myOntology">
+    
+    <Prefix name="myOnt" IRI="http://example.com/myOntology#"/>
+    <Import>http://example.com/someOtherOntology</Import>
+
+    <Declaration>
+        <Class IRI="#GlobalObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#String"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Boolean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Number"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Array"/>
+    </Declaration>
+        <Declaration>
+        <Class IRI="#Enum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnyValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Function"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Arguments"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Void"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StdOut"/>
+    </Declaration>
+
+    
+    <Declaration>
+        <ObjectProperty IRI="#inherits"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#concatenates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#adds"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#extracts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#multiplies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#divides"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#addsLogiccally"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#multipliesLogiccally"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#spreadsInto"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recieves"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#returns"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#printsTo"/>
+    </Declaration>
+
+
+
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:String"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#inherits"/>
+            <Class IRI="#GlobalObject"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:String"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#concatenates"/>
+            <Class IRI="#String"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:String"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#printsTo"/>
+            <Class IRI="#StdOut"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:String"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#spreadsInto"/>
+            <Class IRI="#Array"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Boolean"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#inherits"/>
+            <Class IRI="#GlobalObject"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Boolean"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#multipliesLogically"/>
+            <Class IRI="#Boolean"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Boolean"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#addsLogically"/>
+            <Class IRI="#Boolean"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Number"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#inherits"/>
+            <Class IRI="#GlobalObject"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Number"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#adds"/>
+            <Class IRI="#Number"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Number"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#extracts"/>
+            <Class IRI="#Number"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Number"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#divides"/>
+            <Class IRI="#Number"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Number"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#multiples"/>
+            <Class IRI="#Number"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Enum"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#inherits"/>
+            <Class IRI="#GlobalObject"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Enum"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#returns"/>
+            <Class IRI="#AnyValue"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Function"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#inherits"/>
+            <Class IRI="#GlobalObject"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Function"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#recieves"/>
+            <Class IRI="#Arguments"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Function"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#returns"/>
+            <Class IRI="#AnyValue"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Function"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#returns"/>
+            <Class IRI="#Void"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Array"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#inherits"/>
+            <Class IRI="#GlobalObject"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Array"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#spreadsInto"/>
+            <Class IRI="#Array"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+
+</Ontology>

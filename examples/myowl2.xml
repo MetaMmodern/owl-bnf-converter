@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ontology xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.w3.org/2002/07/owl# http://www.w3.org/2009/09/owl2-xml.xsd"
+    xmlns="http://www.w3.org/2002/07/owl#"
+    xml:base="http://example.com/myOntology"
+    ontologyIRI="http://example.com/myOntology">
+    
+    <Prefix name="myOnt" IRI="http://example.com/myOntology#"/>
+    <Import>http://example.com/someOtherOntology</Import>
+
+    <Declaration>
+        <Class IRI="#Human"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dog"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="myOnt:Tabloid"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="myOnt:Book"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Salad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flower"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ball"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eats"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reads"/>
+    </Declaration>
+        <Declaration>
+        <ObjectProperty IRI="#smells"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pets"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reads"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#throws"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#catches"/>
+    </Declaration>
+
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Dog"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#reads"/>
+            <Class IRI="#Tabloid"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Dog"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Bone"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Dog"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#catches"/>
+            <Class IRI="#Ball"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Dog"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#smells"/>
+            <Class IRI="#Flower"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Human"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#eats"/>
+            <Class IRI="#Salad"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Human"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#reads"/>
+            <Class IRI="#Book"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Human"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#smells"/>
+            <Class IRI="#Flower"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Human"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#throws"/>
+            <Class IRI="#Ball"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="myOnt:Human"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#pets"/>
+            <Class IRI="#Dog"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+
+</Ontology>
